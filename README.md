@@ -1,2 +1,2 @@
 # Django_class
-Aplicativo produzido para facilitar contagem de pontuação de atividades em uma classe dentro de um conceito de gamificação básica.
+Aplicativo produzido para facilitar contagem de pontuação de atividades em uma classe inserido em um conceito de gamificação.
