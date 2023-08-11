@@ -1,6 +1,8 @@
 from django.apps import AppConfig
 
 
-class ClassConfig(AppConfig):
+class TeamConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.class'
+    name = 'apps.team'
+
+    verbose_name = "Turmas"

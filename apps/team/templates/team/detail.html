@@ -1,0 +1,34 @@
+<html>
+
+<table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Student</th>
+        {% for activity in activities %}
+          <th>{{ activity.name }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for student in team.students.all %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ student.name }}</td>
+        {% for activity in activities %}
+          <td>
+            {% with score=student.scores.get(activity=activity) %}
+              {% if score %}
+                {{ score.score }}
+              {% else %}
+                N/A
+              {% endif %}
+            {% endwith %}
+          </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>  
+  
+</html>
